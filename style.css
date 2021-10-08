@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    background-image: url(phonk1.jpg);
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    text-align: center;
+    height: 75px;
+    background-color: antiquewhite;
+    background-image: url(phonk01.jpg);
+    list-style-type: none;
+}
+
+.header li {
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 150px
+}
+
+.header a {
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    border: 2px black solid;
+}
+
+    .header a:hover {
+        transform: scale(1.1);
+        color: blue;
+    }
+
+img {
+    outline: 3px black solid;
+}
+
+footer {
+    text-align: left;
+    height: 170px;
+    background-color: lightskyblue;
+    background-image: url(footerphonk3.jpg);
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-left: 50px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: black;
+}
+
+footer div{
+    width: 40%;
+    overflow: hidden;
+    height: 100%;
+    display: inline-block;
+}
+
+
+img {
+    width: 400px;
+    height: 250px;
+}
