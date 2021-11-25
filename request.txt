@@ -1,0 +1,11 @@
+1.
+UPDATE user SET Bdate = SUBSTR(Bdate, 7, 4) || '-' || SUBSTR(Bdate, 4, 2) || '-' || SUBSTR(Bdate, 1, 2);
+UPDATE user SET Rdate = SUBSTR(Rdate, 7, 4) || '-' || SUBSTR(Rdate, 4, 2) || '-' || SUBSTR(Rdate, 1, 2);
+2.
+select Name, Surname, Rdate from user order by Rdate desc LIMIT 1;
+3.
+select DISTINCt SUBSTR(Bdate, 1, 4) from user;
+4.
+select sum(amount) from item;
+5.
+SELECT AVG((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(Bdate,1,4))-(SUBSTR(CURRENT_DATE,6,5)<SUBSTR(Bdate,6,5))) AS 'Age' FROM user WHERE SUBSTR(Rdate,9,2)<=SUBSTR(CURRENT_DATE,9,2) AND ((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(Rdate,1,4))*12+(SUBSTR(CURRENT_DATE,6,2)-SUBSTR(Rdate,6,2)))<=2 OR SUBSTR(Rdate,9,2)>SUBSTR(CURRENT_DATE,9,2) AND ((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(Rdate,1,4))*12+(SUBSTR(CURRENT_DATE,6,2)-SUBSTR(Rdate,6,2)))<=3;
