@@ -1,57 +1,45 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="shortcut icon" href="pictures/icon.png" type="image/png">    
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="pictures/icon.png" type="image/png">
-    <title>Enrvshmnt КАТАЛОГ</title>
+    <title>{% block title %}Enrvshmnt О НАС{% endblock %}</title>
+    {% endblock %}
 </head>
 
 <html>
-
 <body>
     <header class="header">
+        {% block header %}
         <ul>
             <li>
-                <a href="Main.html">
+                <a href="/">
                     Главная
                 </a>
             </li>
 
             <li>
-                <a href="Catalog.html">
+                <a href="/catalog">
                     Каталог
                 </a>
             </li>
 
             <li>
-                <a href="about.html">
+                <a href="/about">
                     О нас
                 </a>
             </li>
         </ul>
+        {% endblock %}
     </header>
-    <div class="container">
-        <div>
-            <img src="pictures/coldice.jpg">
-            <a href="coldice.html">
-                Холодный лёд (9990₽ - 100г)
-            </a>
-        </div>
-        <div>
-            <img src="pictures/hotice.jpg">
-            <a href="hotice.html">
-                Тёплый лёд (15700₽ - 100г)
-            </a>
-        </div>
-        <div>
-            <img src="pictures/finskyice.jpg">
-            <a href="finskyice.html">
-                Финский лёд (28700₽ - 100г)
-            </a>
-        </div>
-    </div>
+
+
+    <div id="content">{% block content %}{% endblock %}</div>
+
+
     <footer>
+        {% block footer %}
         <div>
             <br>
             Контактная информация:
@@ -75,8 +63,10 @@
             Антакрктида, 01122019
             <br />
             Улица Пингвинов, дом Бабуинов
-        </div>
+        </div> 
+        {% endblock %}
     </footer>
+    
 </body>
 
 </html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Enrvshmnt О НАС{% endblock %}
+
+<html>
+<body>
+    {% block content %}
+    <br>
+    <br>
+    <form action="#">
+        <legend>Расскажите о себе</legend>
+        Представьтесь <input type="text" name="name" placeholder="Ваше имя"> <br>
+        Почта для обратной связи <input type="email" name="email" placeholder="Ваша почта"><br>
+        Оставьте Ваш отзыв, пожелания или предложения<br>
+        <textarea name="review" id="" cols="60" rows="5"></textarea>
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <br>
+    <h2>
+        Мы на карте:
+    </h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1vdK2bVbVE74C5k8V5-N_h54GvMgUbVmI" width="600" height="480"></iframe>
+    <br />
+    {% endblock %}
+</body>
+
+</html>
