@@ -35,6 +35,12 @@ class Basket(db.Model):
     count = db.Column(db.Integer)
 
 
+class Reviews(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+    text = db.Column(db.String(400), nullable=False)
+    time = db.Column(db.DateTime)
 
 db.create_all()
 

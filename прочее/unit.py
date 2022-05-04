@@ -5,7 +5,7 @@ import sqlite3
 class TestBD(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.database = sqlite3.connect('test1.db')
+        self.database = sqlite3.connect('testdb.db')
         self.cur = self.database.cursor()
         self.cur.execute('''CREATE TABLE IF NOT EXISTS "Item" (
         "id"	INTEGER,

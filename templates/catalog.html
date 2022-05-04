@@ -7,24 +7,15 @@
 <body>
     {% block content %}
     <div class="container">
+
+        {% for item in items %}
         <div>
-            <img src="pictures/coldice.jpg">
-            <a href="coldice.html">
-                Холодный лёд (9990₽ - 100г)
+            <img src="{{ url_for('static', filename='/pictures/' + item.image) }}"/>
+            <a href="ice/{{item.id}}">
+                {{item.name}} ({{item.price}}₽ - 100г)
             </a>
         </div>
-        <div>
-            <img src="pictures/hotice.jpg">
-            <a href="hotice.html">
-                Тёплый лёд (15700₽ - 100г)
-            </a>
-        </div>
-        <div>
-            <img src="pictures/finskyice.jpg">
-            <a href="finskyice.html">
-                Финский лёд (28700₽ - 100г)
-            </a>
-        </div>
+        {% endfor %}
     </div>
     {% endblock %}
 

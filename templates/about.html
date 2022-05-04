@@ -5,8 +5,13 @@
 <body>
     {% block content %}
     <br>
+    <h2>
+        Мы на карте:
+    </h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1vdK2bVbVE74C5k8V5-N_h54GvMgUbVmI" width="600" height="480"></iframe>
+    <br />
     <br>
-    <form action="#">
+    <form method="POST">
         <legend>Расскажите о себе</legend>
         Представьтесь <input type="text" name="name" placeholder="Ваше имя"> <br>
         Почта для обратной связи <input type="email" name="email" placeholder="Ваша почта"><br>
@@ -17,11 +22,13 @@
         <input type="reset">
     </form>
     <br>
-    <h2>
-        Мы на карте:
-    </h2>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1vdK2bVbVE74C5k8V5-N_h54GvMgUbVmI" width="600" height="480"></iframe>
-    <br />
+    <h1>Отзывы:</h1>
+    {% for i in reviews %}
+        <div class="review">
+            От: {{i.name}} <br>
+            {{i.text}}
+        </div>
+    {% endfor %}
     {% endblock %}
 </body>
 

@@ -181,3 +181,9 @@ img {
     }
 }
 
+
+.review{
+    border: blue 3px solid;
+    margin: 8px;
+    font-size: 26px
+}
